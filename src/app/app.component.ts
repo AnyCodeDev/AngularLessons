@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'course-project';
+  word: string = 'an apple';
+  translation: string = 'яблоко';
+  status: boolean = true;
+  canAddWord: boolean = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.canAddWord = true;
+    }, 2000);
+  }
+
+
+  getWordStatus(): string {
+    return this.status ? 'Изучено' : 'Ещё не изучено';
+  }
 }
