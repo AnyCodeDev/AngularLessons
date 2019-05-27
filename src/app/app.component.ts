@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   word: string = 'an apple';
   translation: string = 'яблоко';
+  newWordStatus: string = 'Ни одного слова не было добавлено!';
   status: boolean = true;
   canAddWord: boolean = false;
 
@@ -20,5 +21,9 @@ export class AppComponent {
 
   getWordStatus(): string {
     return this.status ? 'Изучено' : 'Ещё не изучено';
+  }
+
+  onWordAdded() {
+    this.newWordStatus = 'Слово было добавлено!';
   }
 }

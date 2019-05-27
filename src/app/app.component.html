@@ -18,8 +18,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <span class="badge badge-dark" [innerText]="canAddWord"></span>
-                            <button class="btn btn-success btn-sm mt-2 float-sm-right" [disabled]="!canAddWord">Добавить новое слово</button>
+                            <p>{{ newWordStatus }}</p>
+                            <button
+                                    class="btn btn-success btn-sm mt-2 float-sm-right"
+                                    [disabled]="!canAddWord"
+                                    (click)="onWordAdded()"
+                            >
+                                Добавить новое слово
+                            </button>
                         </div>
                     </div>
                 </div>
